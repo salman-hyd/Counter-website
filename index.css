@@ -1,46 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-    background-image: url("station.jpg");
-    background-size: cover;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: bold;
-    text-align: center;
-    height:100px
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+
+  background-color: #1f2937;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("station.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  color: #1f2937;
 }
 
 .container {
-    background:white;
-    max-width:80%;
-    margin:auto;
-    border:3px solidblack;
+  width: min(100%, 420px);
+  padding: 32px 28px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 24px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
 }
 
 h1 {
-    margin-top: 15px;
-    margin-bottom: 15px;
+  margin: 0 0 8px;
+  font-size: 24px;
+  color: #374151;
 }
 
 h2 {
-    font-size: 50px;
-    margin-top: 10;
-    margin-bottom: 20px;
+  margin: 0 0 24px;
+  font-size: 64px;
+  line-height: 1;
+  color: #111827;
 }
 
 button {
-    border: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: white;
-    font-weight: bold;
-    width: 250px;
-    margin-bottom: 5px;
-    border-radius: 30px;
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 14px 16px;
+  color: white;
+  font-weight: 800;
+  font-size: 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.15s ease, filter 0.15s ease, box-shadow 0.15s ease;
+}
+
+button + button {
+  margin-top: 12px;
 }
 
 #increment-btn {
-    background: blue;
+  background: #2563eb;
 }
 
 #save-btn {
-    background: darkgreen;
+  background: #15803d;
 }
 
+button:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#save-el {
+  margin: 20px 0 0;
+  min-height: 24px;
+  color: #4b5563;
+  font-weight: 600;
+  line-height: 1.5;
+  word-break: break-word;
+}
